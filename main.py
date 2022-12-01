@@ -423,11 +423,14 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
             filesize = []
             txtinfo = txtsendname + '\n #𝔽𝕚𝕟𝕒𝕝𝕚𝕫𝕒𝕕𝕠'
             username = ev.message.chat.username
-                        await bot.send_file(ev.chat,txtsendname,
+            premium = os.path.basename('especial.tgs')
+            await bot.delete_messages(ev.chat,message)
+            await bot.send_file(ev.chat,txtsendname,
                                 caption=f'{txtinfo}',
                                 thumb='thumb.png',
-                                buttons=[Button.url(' 𝑨𝒃𝒐𝒍𝒂𝒏𝒐𝒔3 ','https://t.me/Abolanos3')])
-            #await bot.send_file('-1001831303559',txtsendname,
+                                buttons=[Button.url('|ıllıll Abolanos3 |ıllıllı','https://t.me/Abolanos3')])
+            await bot.send_file(ev.chat,premium)
+            #await bot.send_file('-1001307957792',txtsendname,
                                 #caption=f'{txtinfo}',
                                 #thumb='thumb.png',
                                 #buttons=[Button.url('@' +username,'https://t.me/' + username)])

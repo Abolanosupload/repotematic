@@ -76,12 +76,11 @@ async def download_progress(dl, filename, currentBits, totalBits, speed, totalti
         message = args[2]
 
         if True:
-            msg = '🔹🔹🔹🔹🔹 #𝔻𝕖𝕤𝕔𝕒𝕣𝕘𝕒𝕟𝕕𝕠 🔹🔹🔹🔹🔹\n'
+            msg = '#𝔻𝕖𝕤𝕔𝕒𝕣𝕘𝕒𝕟𝕕𝕠 \n'
             msg += '🏷️ ' + filename + ' 🏷️ '
             msg += text_progres(currentBits, totalBits) + ' ' + str(porcent(currentBits, totalBits)) + '%\n'
             msg += '🔽 ' + sizeof_fmt(currentBits) + ' de ' + sizeof_fmt(totalBits) + '\n'
             msg += '⚡ ' + sizeof_fmt(speed) + '⏳ ' + str(time.strftime('%H:%M:%S', time.gmtime(totaltime))) + '/s\n'
-            msg += '🔹🔹🔹🔹🔹 #𝔻𝕖𝕤𝕔𝕒𝕣𝕘𝕒𝕟𝕕𝕠 🔹🔹🔹🔹🔹\n\n'
             await bot.edit_message(ev.chat,message,text=msg)
 
     except Exception as ex:
@@ -98,12 +97,11 @@ def upload_progress(filename, currentBits, totalBits, speed, totaltime, args):
         loop = args[3]
 
         if True:
-            msg = '🔹🔹🔹🔹🔹 #𝕊𝕦𝕓𝕚𝕖𝕟𝕕𝕠 🔹🔹🔹🔹🔹\n'
+            msg = ' #𝕊𝕦𝕓𝕚𝕖𝕟𝕕𝕠 \n'
             msg += '🏷️ ' + filename + ' 🏷️ '
             msg += '\n' + text_progres(currentBits, totalBits) + ' ' + str(porcent(currentBits, totalBits)) + '%\n' + '\n'
             msg += '🔼 ' + sizeof_fmt(currentBits) + ' de ' + sizeof_fmt(totalBits) + '\n'
             msg += '⚡ ' + sizeof_fmt(speed) + '⏳ ' + str(time.strftime('%H:%M:%S', time.gmtime(totaltime))) + 's\n'
-            msg += '🔹🔹🔹🔹🔹#𝕊𝕦𝕓𝕚𝕖𝕟𝕕𝕠 🔹🔹🔹🔹🔹\n\n'
             STORE_UPLOADER[filename] = msg
 
     except Exception as ex:
@@ -423,15 +421,12 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
             tspace = config.space
             tspace[username] = tspace[username] + spac
             filesize = []
-            txtinfo = txtsendname + '\n🔹🔹🔹🔹🔹 #𝔽𝕚𝕟𝕒𝕝𝕚𝕫𝕒𝕕𝕠 🔹🔹🔹🔹🔹'
+            txtinfo = txtsendname + '\n #𝔽𝕚𝕟𝕒𝕝𝕚𝕫𝕒𝕕𝕠'
             username = ev.message.chat.username
-            premium = os.path.basename('especial.tgs')
-            await bot.delete_messages(ev.chat,message)
-            await bot.send_file(ev.chat,txtsendname,
+                        await bot.send_file(ev.chat,txtsendname,
                                 caption=f'{txtinfo}',
                                 thumb='thumb.png',
-                                buttons=[Button.url('|ıllıll 𝑨𝒃𝒐𝒍𝒂𝒏𝒐𝒔3 |ıllıllı','https://t.me/Abolanos3')])
-            await bot.send_file(ev.chat,premium)
+                                buttons=[Button.url(' 𝑨𝒃𝒐𝒍𝒂𝒏𝒐𝒔3 ','https://t.me/Abolanos3')])
             #await bot.send_file('-1001831303559',txtsendname,
                                 #caption=f'{txtinfo}',
                                 #thumb='thumb.png',

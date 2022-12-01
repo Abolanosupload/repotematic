@@ -77,11 +77,11 @@ async def download_progress(dl, filename, currentBits, totalBits, speed, totalti
 
         if True:
             msg = '=====>>> #𝔻𝕖𝕤𝕔𝕒𝕣𝕘𝕒𝕟𝕕𝕠 <<<<=====\n'
-            msg += '⚜️ ' + filename + ' ⚜️ '
-            msg += '\n' + text_progres(currentBits, totalBits) + ' ' + str(porcent(currentBits, totalBits)) + '%\n' + '\n'
-            msg += '#𝔻𝕖𝕤𝕔𝕒𝕣𝕘𝕒𝕕𝕠 =>> ' + sizeof_fmt(currentBits) + ' de ' + sizeof_fmt(totalBits) + '\n'
-            msg += '#𝕍𝕖𝕝𝕠𝕔𝕚𝕕𝕒𝕕 =>> ' + sizeof_fmt(speed) + '/s\n'
-            msg += '#𝕋𝕚𝕖𝕞𝕡𝕠 =>> ' + str(time.strftime('%H:%M:%S', time.gmtime(totaltime))) + 's\n'
+            msg += '🏷️ ' + filename + ' 🏷️ '
+            msg += text_progres(currentBits, totalBits) + ' ' + str(porcent(currentBits, totalBits)) + '%\n'
+            msg += '🔽 ' + sizeof_fmt(currentBits) + ' de ' + sizeof_fmt(totalBits) + '\n'
+            msg += '⚡ ' + sizeof_fmt(speed) + '/s\n'
+            msg += '⏳ ' + str(time.strftime('%H:%M:%S', time.gmtime(totaltime))) + 's\n'
             msg += '=====>>> #𝔻𝕖𝕤𝕔𝕒𝕣𝕘𝕒𝕟𝕕𝕠 <<<<=====\n\n'
             await bot.edit_message(ev.chat,message,text=msg)
 

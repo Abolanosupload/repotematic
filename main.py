@@ -76,13 +76,12 @@ async def download_progress(dl, filename, currentBits, totalBits, speed, totalti
         message = args[2]
 
         if True:
-            msg = '=====>>> #𝔻𝕖𝕤𝕔𝕒𝕣𝕘𝕒𝕟𝕕𝕠 <<<<=====\n'
+            msg = '🔹🔹🔹🔹🔹 #𝔻𝕖𝕤𝕔𝕒𝕣𝕘𝕒𝕟𝕕𝕠 🔹🔹🔹🔹🔹\n'
             msg += '🏷️ ' + filename + ' 🏷️ '
             msg += text_progres(currentBits, totalBits) + ' ' + str(porcent(currentBits, totalBits)) + '%\n'
             msg += '🔽 ' + sizeof_fmt(currentBits) + ' de ' + sizeof_fmt(totalBits) + '\n'
-            msg += '⚡ ' + sizeof_fmt(speed) + '/s\n'
-            msg += '⏳ ' + str(time.strftime('%H:%M:%S', time.gmtime(totaltime))) + 's\n'
-            msg += '=====>>> #𝔻𝕖𝕤𝕔𝕒𝕣𝕘𝕒𝕟𝕕𝕠 <<<<=====\n\n'
+            msg += '⚡ ' + sizeof_fmt(speed) + '⏳ ' + str(time.strftime('%H:%M:%S', time.gmtime(totaltime))) + '/s\n'
+            msg += '🔹🔹🔹🔹🔹 #𝔻𝕖𝕤𝕔𝕒𝕣𝕘𝕒𝕟𝕕𝕠 🔹🔹🔹🔹🔹\n\n'
             await bot.edit_message(ev.chat,message,text=msg)
 
     except Exception as ex:
@@ -99,13 +98,12 @@ def upload_progress(filename, currentBits, totalBits, speed, totaltime, args):
         loop = args[3]
 
         if True:
-            msg = '=====>>> #𝕊𝕦𝕓𝕚𝕖𝕟𝕕𝕠 <<<<=====\n'
-            msg += '⚜️ ' + filename + ' ⚜️ '
+            msg = '🔹🔹🔹🔹🔹 #𝕊𝕦𝕓𝕚𝕖𝕟𝕕𝕠 🔹🔹🔹🔹🔹\n'
+            msg += '🏷️ ' + filename + ' 🏷️ '
             msg += '\n' + text_progres(currentBits, totalBits) + ' ' + str(porcent(currentBits, totalBits)) + '%\n' + '\n'
-            msg += '#𝕊𝕦𝕓𝕚𝕕𝕠 =>> ' + sizeof_fmt(currentBits) + ' de ' + sizeof_fmt(totalBits) + '\n'
-            msg += '#𝕍𝕖𝕝𝕠𝕔𝕚𝕕𝕒𝕕 =>> ' + sizeof_fmt(speed) + '/s\n'
-            msg += '#𝕋𝕚𝕖𝕞𝕡𝕠 =>> ' + str(time.strftime('%H:%M:%S', time.gmtime(totaltime))) + 's\n'
-            msg += '=====>>> #𝕊𝕦𝕓𝕚𝕖𝕟𝕕𝕠 <<<<=====\n\n'
+            msg += '🔼 ' + sizeof_fmt(currentBits) + ' de ' + sizeof_fmt(totalBits) + '\n'
+            msg += '⚡ ' + sizeof_fmt(speed) + '⏳ ' + str(time.strftime('%H:%M:%S', time.gmtime(totaltime))) + 's\n'
+            msg += '🔹🔹🔹🔹🔹#𝕊𝕦𝕓𝕚𝕖𝕟𝕕𝕠 🔹🔹🔹🔹🔹\n\n'
             STORE_UPLOADER[filename] = msg
 
     except Exception as ex:
@@ -213,8 +211,8 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
         pass
 
     if '/start' in text:
-        reply = '————————》<a href="https://t.me/Abolanos3">RayServer</a>《—————————\n'
-        reply += '𝓔𝓷𝓿í𝓮𝓶𝓮 𝓮𝓷𝓵𝓪𝓬𝓮𝓼 𝓹𝓪𝓻𝓪 𝓼𝓮𝓻 #𝓓𝓮𝓼𝓬𝓪𝓻𝓰𝓪𝓭𝓸𝓼\n🔍 𝓜𝓪𝓷𝓭𝓮 /info 𝔂 𝓵𝓮𝓪 𝓭𝓮𝓽𝓪𝓵𝓵𝓪𝓭𝓪𝓶𝓮𝓷𝓽𝓮\n————————》<a href="https://t.me/Abolanos3">RayServer</a>《—————————\n'
+        reply = '》<a href="https://t.me/Abolanos3">Abolanos3</a>《\n'
+        reply += '𝓔𝓷𝓿í𝓮𝓶𝓮 𝓮𝓷𝓵𝓪𝓬𝓮𝓼 𝓹𝓪𝓻𝓪 𝓼𝓮𝓻 #𝓓𝓮𝓼𝓬𝓪𝓻𝓰𝓪𝓭𝓸𝓼\n🔍 𝓜𝓪𝓷𝓭𝓮 /info 𝔂 𝓵𝓮𝓪 𝓭𝓮𝓽𝓪𝓵𝓵𝓪𝓭𝓪𝓶𝓮𝓷𝓽𝓮\n》<a href="https://t.me/Abolanos3">Abolanos3</a>《\n'
         message = await bot.send_message(ev.chat.id,reply,parse_mode='html')
         pass
     if '/add' in text and username in godlist:
@@ -425,7 +423,7 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
             tspace = config.space
             tspace[username] = tspace[username] + spac
             filesize = []
-            txtinfo = '====>>> #𝔽𝕚𝕟𝕒𝕝𝕚𝕫𝕒𝕕𝕠 <<<<====\n#ℕ𝕒𝕞𝕖: ' + txtsendname + '\n\n>>>> ' + str(space) + 'mb 𝕖𝕟 #ℙ𝕒𝕣𝕥𝕖𝕤 𝕕𝕖 99  𝕞𝕓\n====>>> #𝔽𝕚𝕟𝕒𝕝𝕚𝕫𝕒𝕕𝕠 <<<<===='
+            txtinfo = txtsendname + '\n🔹🔹🔹🔹🔹 #𝔽𝕚𝕟𝕒𝕝𝕚𝕫𝕒𝕕𝕠 🔹🔹🔹🔹🔹'
             username = ev.message.chat.username
             premium = os.path.basename('especial.tgs')
             await bot.delete_messages(ev.chat,message)

@@ -80,7 +80,7 @@ async def download_progress(dl, filename, currentBits, totalBits, speed, totalti
             msg += '🏷️ ' + filename + ' 🏷️ '
             msg += text_progres(currentBits, totalBits) + ' ' + str(porcent(currentBits, totalBits)) + '%\n'
             msg += '🔽 ' + sizeof_fmt(currentBits) + ' de ' + sizeof_fmt(totalBits) + '\n'
-            msg += '⚡ ' + sizeof_fmt(speed) + '⏳ ' + str(time.strftime('%H:%M:%S', time.gmtime(totaltime))) + '/s\n'
+            msg += '⚡ ' + sizeof_fmt(speed) +   '⏳ ' + str(time.strftime('%H:%M:%S', time.gmtime(totaltime))) + '/s\n'
             await bot.edit_message(ev.chat,message,text=msg)
 
     except Exception as ex:
@@ -101,7 +101,7 @@ def upload_progress(filename, currentBits, totalBits, speed, totaltime, args):
             msg += '🏷️ ' + filename + ' 🏷️ '
             msg += '\n' + text_progres(currentBits, totalBits) + ' ' + str(porcent(currentBits, totalBits)) + '%\n' + '\n'
             msg += '🔼 ' + sizeof_fmt(currentBits) + ' de ' + sizeof_fmt(totalBits) + '\n'
-            msg += '⚡ ' + sizeof_fmt(speed) + '⏳ ' + str(time.strftime('%H:%M:%S', time.gmtime(totaltime))) + 's\n'
+            msg += '⚡ ' + sizeof_fmt(speed) +   '⏳ ' + str(time.strftime('%H:%M:%S', time.gmtime(totaltime))) + 's\n'
             STORE_UPLOADER[filename] = msg
 
     except Exception as ex:
@@ -423,8 +423,8 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
             filesize = []
             txtinfo = txtsendname + '\n #𝔽𝕚𝕟𝕒𝕝𝕚𝕫𝕒𝕕𝕠'
             username = ev.message.chat.username
-            premium = os.path.basename('especial.tgs')
-            await bot.delete_messages(ev.chat,message)
+            #premium = os.path.basename('especial.tgs')
+            #await bot.delete_messages(ev.chat,message)
             await bot.send_file(ev.chat,txtsendname,
                                 caption=f'{txtinfo}',
                                 thumb='thumb.png',
